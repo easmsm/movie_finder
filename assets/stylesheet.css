@@ -36,3 +36,14 @@ font-family: 'Roboto', sans-serif */
 .opacity {
     opacity: 50%;
 }
+
+.saved-movies {
+    border-bottom: 1px solid black;
+    width: fit-content;
+}
+
+
+.saved-section {
+    display: flex;
+    justify-content: center;
+}

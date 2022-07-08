@@ -1,7 +1,7 @@
 var inputEl = document.querySelector(".input")
 var generateBtnEl = document.querySelector(".generate")
-
-savedMovies = [] 
+var  saveBtnEl = document.querySelector(".save")
+var savedMoviesUlEl = document.querySelector(".savedMovies")
 
 
 function randomUrl() {
@@ -37,11 +37,18 @@ generateBtnEl.addEventListener("click", function(){
 
 
 
-
-
-
-
 function randomIndex(array) {
 
     return Math.floor(Math.random() * array.length)
 }
+
+saveBtnEl.addEventListener("click", function(){
+    var li = document.createElement("li");
+    li.appendChild(document.createTextNode(inputEl.innerHTML));
+    savedMoviesUlEl.appendChild(li);
+
+
+
+})
+
+
