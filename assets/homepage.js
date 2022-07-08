@@ -2,6 +2,7 @@ var inputEl = document.querySelector(".input")
 var generateBtnEl = document.querySelector(".generate")
 var  saveBtnEl = document.querySelector(".save")
 var savedMoviesUlEl = document.querySelector(".savedMovies")
+var googlebtnEl = document.querySelector(".google")
 
 
 function randomUrl() {
@@ -47,8 +48,10 @@ saveBtnEl.addEventListener("click", function(){
     li.appendChild(document.createTextNode(inputEl.innerHTML));
     savedMoviesUlEl.appendChild(li);
 
-
-
 })
 
+googlebtnEl.addEventListener("click", function(){
+    window.open('http://www.google.com/search?q=' + inputEl.innerHTML);      
+
+})
 
