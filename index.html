@@ -1,12 +1,134 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <link rel="stylesheet" href="./assets/stylesheet.css">
+    <!-- bulma CDN  -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.9.4/css/bulma.min.css">
+    <!-- google fonts  -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Passion+One&family=Paytone+One&family=Roboto:wght@300;400;500&display=swap"
+        rel="stylesheet">
+    <!-- google fonts end  -->
+
+    <!-- favicon  -->
+    <link rel="icon" type="image/x-icon" href="./assets/images/icons8-search-50.png">
+    <!-- fontawesome for spinning magnifying glass in nav  -->
+    <script src="https://kit.fontawesome.com/33f18caacf.js" crossorigin="anonymous"></script>
+    <!-- jquery as an attempt to get around CORs error-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+    <title>Movie Finder</title>
 </head>
+
 <body>
+
+    <!-- navbar section  -->
+    <nav class="navbar is-dark" role="navigation" aria-label="main navigation">
+        <div class="navbar-brand is-align-items-center is-flex is-justify-content-center">
+            <p class="has-text-light">Movie Finder <i class="fa-solid fa-magnifying-glass fa-sm fa-flip"
+                    style="--fa-animation-duration: 3s;"></i></i></p>
+        </div>
+    </nav>
+
+
+    <!-- Hero section  -->
+    <section class="hero is-small is-link mb-5">
+        <div class="hero-body">
+            <p class="title has-text-centered welcome">
+                Welcome!
+            </p>
+            <p class="subtitle has-text-centered">
+                Need a suggestion on what to watch?
+                <br>
+                You're in the right place!
+            </p>
+
+            <!-- <hr>
+            <p class="title">
+                How to Use:
+            </p>
+            <p class="subtitle">
+                Simply click the 'Generate Movie' button for a random suggestion.
+                <br>
+                Interested? Save the movie to the Watch list with the 'save' button!
+            </p>
+            <p></p> -->
+
+        </div>
+    </section>
+
+    <!-- <div class="columns is-centered">
+        <div class=" column is-half container movie-container is">
+            <div class="notification is-primary">
+                This container is <strong>centered</strong> on desktop and larger viewports.
+            </div>
+            <button
+                class=" generate button is-dark is-medium is-flex is-align-items-center is-justify-content-center">Dark</button>
+        </div>
+    </div> -->
+
+
+    <!-- movie search and button controls section  -->
+    <div class="level-center mb-6">
+        <div class="level-item">
+            <p class="subtitle is-5 mb-2">
+                <strong>Click the Search button for a movie suggestion!</strong>
+            </p>
+        </div>
+        <div class="level-item">
+            <div class="field has-addons">
+                <p class="control input opacity">
+                    Your suggestion awaits....
+                </p>
+                <p class="control">
+                    <button class="button generate is-link mr-1">
+                        Search
+                    </button>
+                </p>
+                <p class="control">
+                    <button class="button save is-success mr-1">
+                        Save
+                    </button>
+                </p>
+                <p class="control">
+                    <button class="button google is-dark">
+                        Search Movie on Google
+                    </button>
+                </p>
+            </div>
+        </div>
+
+    </div>
+
+
+    <!-- saved movie section  -->
+    <div class="container saved-section">
+        <div class="box">
+            <h2 class="title is-5 saved-movies has-text-centered">Saved Movies</h2>
+            <ul class="savedMovies"></ul>
+        </div>
+    </div>
+
+<br />
+    <!-- Twitter hashtag search -->
+    <div class="container" id="movie-search">
+        <div class="box">
+            <h2 class="title is-5 saved-movies has-text-centered">Discussion</h2>
+            <p id="twitter-search"></p>
+            <button onclick="search()">Search</button>
+        </div>
+    </div>
+
     
+    <script src="./assets/twittersearch.js"></script>
+    <script src="./assets/homepage.js"></script>
+
 </body>
+
 </html>

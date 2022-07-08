@@ -1,0 +1,55 @@
+/* 
+fonts
+font-family: 'Passion One', cursive;
+font-family: 'Paytone One', sans-serif;
+font-family: 'Roboto', sans-serif */
+
+
+*{
+    font-family: 'Roboto', sans-serif;
+}
+
+.navbar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Paytone One', sans-serif;
+    font-weight: 400;
+    font-size: 30px;
+}
+
+.welcome {
+    font-style: italic;
+}
+
+
+
+/*.hero {
+     width: 50%; 
+}
+*/
+
+.rows{
+    display: flex;
+    flex-direction: column;
+}
+
+.opacity {
+    opacity: 50%;
+}
+
+.saved-movies {
+    border-bottom: 1px solid black;
+    width: fit-content;
+}
+
+
+.saved-section {
+    display: flex;
+    justify-content: center;
+}
+
+.google {
+    display: flex;
+    justify-content: center;
+}
