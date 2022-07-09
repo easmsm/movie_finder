@@ -20,9 +20,11 @@ var fetchFunction = function(){
     fetch(randomUrl())
     .then(response => response.json())
     .then(response => {
-        console.log(response.results[0])
+        // console.log(response.results[0])
         var movie = randomIndex(response.results)
             inputEl.innerHTML = response.results[movie].title
+            console.log(response.results[movie].title)
+
     })
     .catch(err => console.error(err));
 }
