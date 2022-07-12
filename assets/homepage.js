@@ -64,3 +64,36 @@ googlebtnEl.addEventListener("click", function(){
 
 })
 
+
+// show quote NOT GOIN TO USE??
+// const options = {
+// 	method: 'GET',
+// 	headers: {
+// 		'X-RapidAPI-Key': '61329c8183msh78cc9d6cf80b668p1997dajsn80542530576b',
+// 		'X-RapidAPI-Host': 'movies-quotes.p.rapidapi.com'
+// 	}
+// };
+
+// fetch('https://movies-quotes.p.rapidapi.com/quote', options)
+// 	.then(response => response.json())
+// 	.then(response => console.log(response))
+// 	.catch(err => console.error(err));
+
+
+// books
+// books
+// books
+const options = {
+	method: 'GET',
+	headers: {
+		'X-RapidAPI-Key': '61329c8183msh78cc9d6cf80b668p1997dajsn80542530576b',
+		'X-RapidAPI-Host': 'bookshelves.p.rapidapi.com'
+	}
+};
+
+fetch('https://bookshelves.p.rapidapi.com/books', options)
+	.then(response => response.json())
+	.then(response => console.log(response))
+	.catch(err => console.error(err));
+
+
