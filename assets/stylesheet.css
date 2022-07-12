@@ -52,3 +52,14 @@ font-family: 'Roboto', sans-serif */
     display: flex;
     justify-content: center;
 }
+
+footer {
+    height: 100px;
+}
+
+.inputBook {
+     /* word-wrap: break-word;  */
+     overflow:auto;
+
+}
+

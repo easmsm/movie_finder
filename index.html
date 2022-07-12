@@ -17,7 +17,7 @@
     <!-- google fonts end  -->
 
     <!-- favicon  -->
-    <link rel="icon" type="image/x-icon" href="./assets/images/icons8-search-50.png">
+    <link rel="icon" type="image/x-icon" href="./assets/images/shelf-icon-14.png">
     <!-- fontawesome for spinning magnifying glass in nav  -->
     <script src="https://kit.fontawesome.com/33f18caacf.js" crossorigin="anonymous"></script>
     <title>Media Shelf</title>
@@ -29,7 +29,7 @@
     <nav class="navbar is-dark" role="navigation" aria-label="main navigation">
         <div class="navbar-brand is-align-items-center is-flex is-justify-content-center">
             <p class="has-text-light"><i class="fa-solid fa-film fa-sm fa-flip"
-                style="--fa-animation-duration: 3s;"></i></i>  Media Shelf  <i class="fa-solid fa-book fa-sm fa-flip"
+                    style="--fa-animation-duration: 3s;"></i></i> Media Shelf <i class="fa-solid fa-book fa-sm fa-flip"
                     style="--fa-animation-duration: 3s;"></i></i></p>
         </div>
     </nav>
@@ -39,28 +39,19 @@
     <section class="hero is-small is-link mb-5">
         <div class="hero-body">
             <p class="title has-text-centered welcome">
-               - Welcome! -
+                - Welcome! -
             </p>
             <p class="subtitle has-text-centered">
-                Need a suggestion on a movie or book?
+                Need a suggestion for a movie or a book?
                 <br>
                 You're in the right place!
             </p>
 
-            <!-- <hr>
-            <p class="title">
-                How to Use:
-            </p>
-            <p class="subtitle">
-                Simply click the 'Generate Movie' button for a random suggestion.
-                <br>
-                Interested? Save the movie to the Watch list with the 'save' button!
-            </p>
-            <p></p> -->
-
         </div>
     </section>
 
+    <!-- green container centered in needed -->
+    <!-- green container centered in needed -->
     <!-- <div class="columns is-centered">
         <div class=" column is-half container movie-container is">
             <div class="notification is-primary">
@@ -76,7 +67,7 @@
     <div class="level-center mb-6">
         <div class="level-item">
             <p class="subtitle is-5 mb-2">
-                <strong>Click the Search button for a movie suggestion!</strong>
+                <strong>Click the Search button for a <b>movie</b> suggestion!</strong>
             </p>
         </div>
         <div class="level-item">
@@ -111,6 +102,67 @@
             <ul class="savedMovies"></ul>
         </div>
     </div>
+
+
+
+
+    <!-- BOOK search and button controls section  -->
+    <div class="level-center mt-6 mb-6">
+        <div class="level-item">
+            <p class="subtitle is-5 mb-2">
+                <strong>Click the Search button for a <b>book</b> suggestion!</strong>
+            </p>
+        </div>
+        <div class="level-item">
+            <div class="field has-addons">
+                <p class="control input inputBook opacity">
+                    Your suggestion awaits....
+                </p>
+                <p class="control">
+                    <button class="button generateBook is-link mr-1">
+                        Search
+                    </button>
+                </p>
+                <p class="control">
+                    <button class="button save is-success mr-1">
+                        Save
+                    </button>
+                </p>
+                <p class="control">
+                    <button class="button google is-dark">
+                        Search Book on Google
+                    </button>
+                </p>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- saved book section  -->
+    <div class="container saved-section">
+        <div class="box">
+            <h2 class="title is-5 saved-movies has-text-centered">Saved Books</h2>
+            <ul class="savedBooks"></ul>
+        </div>
+    </div>
+
+
+
+
+
+
+    <footer class="footer mt-6 has-text-light has-background-dark" >
+        <div class="content has-text-centered is-dark">
+          <p>
+            <strong class="has-text-light">Thanks for Visiting</strong>
+          </p>
+          <p><i class="fa-solid fa-heart"></i></p>
+        </div>
+      </footer>
+
+
+
+
 
 
 

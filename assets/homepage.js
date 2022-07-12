@@ -1,9 +1,12 @@
 // variables for DOM elements 
 var inputEl = document.querySelector(".input")
 var generateBtnEl = document.querySelector(".generate")
-var  saveBtnEl = document.querySelector(".save")
+var saveBtnEl = document.querySelector(".save")
 var savedMoviesUlEl = document.querySelector(".savedMovies")
 var googlebtnEl = document.querySelector(".google")
+var savedBookUlEl = document.querySelector(".savedBooks")
+var generateBookBtnEl = document.querySelector(".generateBook")
+var inputBookEl = document.querySelector(".inputBook")
 
 
 // random page from fetch function 
@@ -15,18 +18,18 @@ function randomUrl() {
 }
 
 // fetch function for generating movie title 
-var fetchFunction = function(){
+var fetchFunction = function () {
 
     fetch(randomUrl())
-    .then(response => response.json())
-    .then(response => {
-        // console.log(response.results[0])
-        var movie = randomIndex(response.results)
+        .then(response => response.json())
+        .then(response => {
+            // console.log(response.results[0])
+            var movie = randomIndex(response.results)
             inputEl.innerHTML = response.results[movie].title
             console.log(response.results[movie].title)
 
-    })
-    .catch(err => console.error(err));
+        })
+        .catch(err => console.error(err));
 }
 
 // btnEl.addEventListener("click", fetchFunction){
@@ -35,7 +38,7 @@ var fetchFunction = function(){
 
 
 // Search button function to call fetch function to get a generated movie every click
-generateBtnEl.addEventListener("click", function(){
+generateBtnEl.addEventListener("click", function () {
     fetchFunction();
     inputEl.classList.remove("opacity")
 
@@ -50,7 +53,7 @@ function randomIndex(array) {
 
 
 // save button click function 
-saveBtnEl.addEventListener("click", function(){
+saveBtnEl.addEventListener("click", function () {
     var li = document.createElement("li");
     li.appendChild(document.createTextNode(inputEl.innerHTML));
     savedMoviesUlEl.appendChild(li);
@@ -59,13 +62,79 @@ saveBtnEl.addEventListener("click", function(){
 
 
 //google click function
-googlebtnEl.addEventListener("click", function(){
-    window.open('http://www.google.com/search?q=' + inputEl.innerHTML);      
+googlebtnEl.addEventListener("click", function () {
+    window.open('http://www.google.com/search?q=' + inputEl.innerHTML);
 
 })
 
 
-// show quote NOT GOIN TO USE??
+
+
+
+
+
+
+
+
+
+
+// // BOOKS 
+// function RandomBook() {
+//     var bookRdm = Math.floor(Math.random() * 37)
+//     return bookRdm
+// }
+
+
+// BOOKS
+// BOOKS
+// BOOKS
+const options = {
+    method: 'GET',
+    headers: {
+        'X-RapidAPI-Key': '61329c8183msh78cc9d6cf80b668p1997dajsn80542530576b',
+        'X-RapidAPI-Host': 'bookshelves.p.rapidapi.com'
+    }
+};
+
+
+var bookFetchFunction = function () {
+    fetch('https://bookshelves.p.rapidapi.com/books', options)
+        .then(response => response.json())
+        .then(response => {
+            // console.log(response.results[0])
+            inputBookEl.innerHTML = response.Books[Math.floor(Math.random() * 37)].title
+
+            console.log(response.Books[Math.floor(Math.random() * 37)].title)
+
+        })
+        .catch(err => console.error(err));
+}
+
+
+
+// Search button function to call fetch function to get a generated movie every click
+generateBookBtnEl.addEventListener("click", function () {
+    bookFetchFunction();
+    inputBookEl.classList.remove("opacity")
+
+
+})
+
+
+
+
+
+
+    .then(response => response.json())
+    .then(response => console.log(response.Books[Math.floor(Math.random() * 37)].title))
+    .catch(err => console.error(err));
+
+//--------------------------------------------------------
+//--------------------------------------------------------
+//--------------------------------------------------------
+
+
+    // show quote NOT GOIN TO USE??
 // const options = {
 // 	method: 'GET',
 // 	headers: {
@@ -78,22 +147,3 @@ googlebtnEl.addEventListener("click", function(){
 // 	.then(response => response.json())
 // 	.then(response => console.log(response))
 // 	.catch(err => console.error(err));
-
-
-// books
-// books
-// books
-const options = {
-	method: 'GET',
-	headers: {
-		'X-RapidAPI-Key': '61329c8183msh78cc9d6cf80b668p1997dajsn80542530576b',
-		'X-RapidAPI-Host': 'bookshelves.p.rapidapi.com'
-	}
-};
-
-fetch('https://bookshelves.p.rapidapi.com/books', options)
-	.then(response => response.json())
-	.then(response => console.log(response))
-	.catch(err => console.error(err));
-
-
