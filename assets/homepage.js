@@ -7,7 +7,7 @@ var googlebtnEl = document.querySelector(".google")
 var savedBookUlEl = document.querySelector(".savedBooks")
 var generateBookBtnEl = document.querySelector(".generateBook")
 var inputBookEl = document.querySelector(".inputBook")
-
+var googleBookBtnEl = document.querySelector(".googleBook")
 
 // random page from fetch function 
 function randomUrl() {
@@ -122,12 +122,26 @@ generateBookBtnEl.addEventListener("click", function () {
 
 
 
+googleBookBtnEl.addEventListener("click", function () {
+    window.open('http://www.google.com/search?q=' + inputBookEl.innerHTML);
+
+})
 
 
 
-    .then(response => response.json())
-    .then(response => console.log(response.Books[Math.floor(Math.random() * 37)].title))
-    .catch(err => console.error(err));
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 //--------------------------------------------------------
 //--------------------------------------------------------
