@@ -57,7 +57,7 @@ footer {
 }
 
 input {
-     /* word-wrap: break-word;  */
+     word-wrap: break-word; 
      overflow:auto;
    
 }
