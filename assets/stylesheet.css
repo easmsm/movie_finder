@@ -37,7 +37,7 @@ font-family: 'Roboto', sans-serif */
     opacity: 50%;
 }
 
-.saved-movies {
+.saved-movies, .saved-books {
     border-bottom: 1px solid black;
     width: fit-content;
 }

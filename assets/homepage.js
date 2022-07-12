@@ -4,10 +4,18 @@ var generateBtnEl = document.querySelector(".generate")
 var saveBtnEl = document.querySelector(".save")
 var savedMoviesUlEl = document.querySelector(".savedMovies")
 var googlebtnEl = document.querySelector(".google")
-var savedBookUlEl = document.querySelector(".savedBooks")
+// var savedBookUlEl = document.querySelector(".savedBooks")
 var generateBookBtnEl = document.querySelector(".generateBook")
 var inputBookEl = document.querySelector(".inputBook")
 var googleBookBtnEl = document.querySelector(".googleBook")
+var savebtnBookEl = document.querySelector(".saveBook")
+var saveBooksUlEl = document.querySelector(".savedBooks")
+
+
+
+// Movies 
+// Movies 
+// Movies 
 
 // random page from fetch function 
 function randomUrl() {
@@ -41,8 +49,6 @@ var fetchFunction = function () {
 generateBtnEl.addEventListener("click", function () {
     fetchFunction();
     inputEl.classList.remove("opacity")
-
-
 })
 
 
@@ -51,13 +57,11 @@ function randomIndex(array) {
 }
 
 
-
 // save button click function 
 saveBtnEl.addEventListener("click", function () {
     var li = document.createElement("li");
     li.appendChild(document.createTextNode(inputEl.innerHTML));
     savedMoviesUlEl.appendChild(li);
-
 })
 
 
@@ -71,23 +75,12 @@ googlebtnEl.addEventListener("click", function () {
 
 
 
+// BOOK SECTION
+// BOOK SECTION
+// BOOK SECTION
 
 
-
-
-
-
-
-// // BOOKS 
-// function RandomBook() {
-//     var bookRdm = Math.floor(Math.random() * 37)
-//     return bookRdm
-// }
-
-
-// BOOKS
-// BOOKS
-// BOOKS
+//rapidAPI key / host
 const options = {
     method: 'GET',
     headers: {
@@ -97,6 +90,7 @@ const options = {
 };
 
 
+//fetch function for generating random book
 var bookFetchFunction = function () {
     fetch('https://bookshelves.p.rapidapi.com/books', options)
         .then(response => response.json())
@@ -112,7 +106,7 @@ var bookFetchFunction = function () {
 
 
 
-// Search button function to call fetch function to get a generated movie every click
+// Search button function to call fetch function to get a generated book every click
 generateBookBtnEl.addEventListener("click", function () {
     bookFetchFunction();
     inputBookEl.classList.remove("opacity")
@@ -121,7 +115,16 @@ generateBookBtnEl.addEventListener("click", function () {
 })
 
 
+// save button click function for book
+savebtnBookEl.addEventListener("click", function () {
+    var li = document.createElement("li");
+    li.appendChild(document.createTextNode(inputBookEl.innerHTML));
+    saveBooksUlEl.appendChild(li);
 
+})
+
+
+//google button event listener to open new tabs and search generated book
 googleBookBtnEl.addEventListener("click", function () {
     window.open('http://www.google.com/search?q=' + inputBookEl.innerHTML);
 
@@ -141,11 +144,18 @@ googleBookBtnEl.addEventListener("click", function () {
 
 
 
+//---------------OLD CODE for reference-------------------
+//--------------------------------------------------------
+//--------------------------------------------------------
 
 
-//--------------------------------------------------------
-//--------------------------------------------------------
-//--------------------------------------------------------
+// // BOOKS 
+// function RandomBook() {
+//     var bookRdm = Math.floor(Math.random() * 37)
+//     return bookRdm
+// }
+
+
 
 
     // show quote NOT GOIN TO USE??
