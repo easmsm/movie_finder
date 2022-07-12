@@ -33,7 +33,7 @@ var fetchFunction = function () {
         .then(response => {
             // console.log(response.results[0])
             var movie = randomIndex(response.results)
-            inputEl.innerHTML = response.results[movie].title
+            inputEl.value = response.results[movie].title
             console.log(response.results[movie].title)
 
         })
@@ -60,7 +60,7 @@ function randomIndex(array) {
 // save button click function 
 saveBtnEl.addEventListener("click", function () {
     var li = document.createElement("li");
-    li.appendChild(document.createTextNode(inputEl.innerHTML));
+    li.appendChild(document.createTextNode(inputEl.value));
     savedMoviesUlEl.appendChild(li);
 })
 
@@ -96,7 +96,7 @@ var bookFetchFunction = function () {
         .then(response => response.json())
         .then(response => {
             // console.log(response.results[0])
-            inputBookEl.innerHTML = response.Books[Math.floor(Math.random() * 37)].title
+            inputBookEl.value = response.Books[Math.floor(Math.random() * 37)].title
 
             console.log(response.Books[Math.floor(Math.random() * 37)].title)
 
@@ -118,7 +118,7 @@ generateBookBtnEl.addEventListener("click", function () {
 // save button click function for book
 savebtnBookEl.addEventListener("click", function () {
     var li = document.createElement("li");
-    li.appendChild(document.createTextNode(inputBookEl.innerHTML));
+    li.appendChild(document.createTextNode(inputBookEl.value));
     saveBooksUlEl.appendChild(li);
 
 })
