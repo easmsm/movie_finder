@@ -6,7 +6,7 @@ font-family: 'Roboto', sans-serif */
 
 
 *{
-    font-family: 'Roboto', sans-serif */
+    font-family: 'Roboto', sans-serif 
 }
 
 .navbar {
@@ -22,10 +22,6 @@ font-family: 'Roboto', sans-serif */
     font-style: italic;
 }
 
-
-.hero {
-    /* width: 50%; */
-}
 
 .rows{
     display: flex;
