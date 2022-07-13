@@ -5,7 +5,7 @@ font-family: 'Paytone One', sans-serif;
 font-family: 'Roboto', sans-serif */
 
 
-*{
+body {
     font-family: 'Roboto', sans-serif 
 }
 
@@ -17,6 +17,7 @@ font-family: 'Roboto', sans-serif */
     font-weight: 400;
     font-size: 30px;
 }
+
 
 .welcome {
     font-style: italic;
