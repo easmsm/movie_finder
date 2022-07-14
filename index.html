@@ -6,7 +6,6 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./assets/stylesheet.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/open-iconic/1.1.1/font/css/open-iconic-foundation.min.css"/>
     <!-- bulma CDN  -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.9.4/css/bulma.min.css">
     <!-- google fonts  -->
@@ -100,13 +99,18 @@
 
     <!-- saved movie section  -->
     <div class="container saved-section">
-        <div class="box">
+        <div class="box has-text-centered">
             <h2 class="title is-5 saved-movies has-text-centered">Saved Movies</h2>
             <ul class="savedMovies"></ul>
         </div>
     </div>
 
+    <!-- delete movie list button  -->
+    <div class="container level-item mt-4">
+        <button class="button is-danger deleteSavedMoviesBtn">Delete List</button>
+    </div>
 
+    <hr>
 
 
     <!-- BOOK search and button controls section  -->
@@ -147,19 +151,28 @@
 
 
     <!-- saved book section  -->
-    <div class="container saved-section">
-        <div class="box">
+    <div class="container saved-section has-text-centered">
+        <div class="box has-text-centered">
             <h2 class="title is-5 saved-books has-text-centered">Saved Books</h2>
-            <ul class="savedBooks"></ul>
+            <ul class="savedBooks has-text-centered"></ul>
         </div>
     </div>
 
+
+    <!-- delete book list button  -->
+    <div class="container level-item mt-4">
+        <button class="button is-danger deleteSavedBooksBtn">Delete List</button>
+    </div>
+
+    <hr>
+
     <!--put food directory here-->
-    <div class="food-container" id="food">
+    <div class="food-container  has-text-centered" id="food">
         <h2 class="food-section-title has-text-centered"> <strong>Hungry? Order with Grubhub!</strong></h2>
-            <div class="food-info">
-                <button class="button grubhubBtn has-background-success" id="grubhub-search">Go to Grubhub <span class="fi-arrow-right"></span></button>
-           </div>
+        <div class="food-info level-item">
+            <button class="button grubhubBtn has-background-success" id="grubhub-search">Go to Grubhub <span
+                    class="fi-arrow-right"></span></button>
+        </div>
     </div>
 
 

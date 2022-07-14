@@ -5,7 +5,7 @@ font-family: 'Paytone One', sans-serif;
 font-family: 'Roboto', sans-serif */
 
 
-*{
+body {
     font-family: 'Roboto', sans-serif 
 }
 
@@ -35,13 +35,20 @@ font-family: 'Roboto', sans-serif */
 .saved-movies, .saved-books {
     border-bottom: 1px solid black;
     width: fit-content;
+    display: flex;
+
 }
 
+hr {
+    margin-top: 50px !important;
+    /* margin-bottom: 10px !important; */
+}
 
 .saved-section {
     display: flex;
     justify-content: center;
 }
+
 
 .google {
     display: flex;
@@ -77,4 +84,6 @@ input {
     font-weight: bold;
     font-size: 15px;
     padding: 100px, 100px, 100px, 100px;
+    display: flex !important;
+    justify-content: center !important;
 }

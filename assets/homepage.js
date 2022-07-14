@@ -12,7 +12,26 @@ var savebtnBookEl = document.querySelector(".saveBook")
 var savedBooksUlEl = document.querySelector(".savedBooks")
 //food search variable
 var foodSearchBtnEl = document.querySelector(".grubhubBtn");
+var deleteBookListBtnEl = document.querySelector(".deleteSavedBooksBtn")
+var deleteMovieListBtnEl = document.querySelector(".deleteSavedMoviesBtn")
 
+
+
+
+//delete book list
+deleteBookListBtnEl.addEventListener("click", function (){
+    savedBooksUlEl.innerHTML = "";
+    window.localStorage.removeItem('booksList');
+
+})
+
+
+//delete movie List
+deleteMovieListBtnEl.addEventListener("click", function (){
+    savedMoviesUlEl.innerHTML = "";
+    window.localStorage.removeItem('moviesList');
+
+})
 
 
 //this will happen on page load
