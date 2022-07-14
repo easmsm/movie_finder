@@ -33,6 +33,32 @@
                     style="--fa-animation-duration: 3s;"></i></i></p>
         </div>
     </nav>
+    
+    <!--Navigation / Menu-->
+    <nav class="navbar has-shadow is-primary">
+        <!--temp logo-->
+        <div class="navbar-brand">
+            <a class="navbar-item">
+                <img src="./assets/images/shelf-icon-14.png" alt="logo">
+            </a>
+
+        <!--Mobile Menu-->
+            <a class="navbar-burger" id="burger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </a>
+        </div>
+
+        <!--Desktop Menu-->
+            <div class="navbar-menu" id="nav-links">
+                <div class="navbar-end">
+                    <a href="#movies" class="navbar-item">Movies</a>
+                    <a href="#books" class="navbar-item">Books</a>
+                    <a href="#food" class="navbar-item">Food</a>
+                </div>
+            </div>
+    </nav>
 
 
     <!-- Hero section  -->
@@ -62,7 +88,7 @@
 
 
     <!-- movie search and button controls section  -->
-    <div class="level-center mb-6">
+    <div class="level-center mb-6" id="movies">
         <div class="level-item">
             <p class="subtitle is-5 mb-2 has-text-centered">
                 <strong>Click the Search button for a <b>movie</b> suggestion!</strong>
@@ -109,7 +135,7 @@
 
 
     <!-- BOOK search and button controls section  -->
-    <div class="level-center mt-6 mb-6">
+    <div class="level-center mt-6 mb-6" id="books">
         <div class="level-item">
             <p class="subtitle is-5 mb-2 has-text-centered">
                 <strong>Click the Search button for a <b>book</b> suggestion!</strong>
@@ -169,6 +195,7 @@
 
 
     <script src="./assets/homepage.js"></script>
+    <script src="./assets/nav.js"></script>
 </body>
 
 </html>
