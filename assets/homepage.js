@@ -15,25 +15,32 @@ var foodSearchBtnEl = document.querySelector(".grubhubBtn");
 var deleteBookListBtnEl = document.querySelector(".deleteSavedBooksBtn")
 var deleteMovieListBtnEl = document.querySelector(".deleteSavedMoviesBtn")
 
+//mobile menu
 
+const burgerIcon = document.querySelector('#burger');
+const navbarMenu = document.querySelector('#nav-links');
 
+burgerIcon.addEventListener('click', () => {
+    navbarMenu.classList.toggle('is-active');
+});
+
+//delete buttons
 
 //delete book list
 deleteBookListBtnEl.addEventListener("click", function (){
     savedBooksUlEl.innerHTML = "";
     window.localStorage.removeItem('booksList');
 
-})
-
+});
 
 //delete movie List
 deleteMovieListBtnEl.addEventListener("click", function (){
     savedMoviesUlEl.innerHTML = "";
     window.localStorage.removeItem('moviesList');
 
-})
+});
 
-
+//PAGE LOAD FUNCTION
 //this will happen on page load
 // get data from local storage and put it on page
 function onPageLoad() {
@@ -43,7 +50,7 @@ function onPageLoad() {
 
     /// because we have an array of data, we need to loop over each item in the array
         for (var i = 0; i < savedMovies.length; i++) {
-            // in a for loop, the current thiing you are loopiing over is savedMovies[i]
+            // in a for loop, the current thing you are looping over is savedMovies[i]
             console.log(savedMovies[i]);
 
     //loads movies in "saved movies list"
@@ -121,30 +128,25 @@ savebtnMovieEl.addEventListener("click", function () {
 
     // first, need to get data in local storage
     var savedMoviesList = JSON.parse(localStorage.getItem("moviesList") || "[]");  // || means "or". If there is nothing in local storage, return empty ARRAY
-    console.log('Saved Movies List:', savedMoviesList);
-
-    // we only want 10 movies on the moives list. IF there are more than 10, remove the oldest one and add a new on
+        console.log("Saved Movies List", savedMoviesList);
+    // we only want 10 movies on the movies list. IF there are more than 10, no more should be added to the list
     // check how many movies are in the movies list
-    if (savedMoviesList.length > 7) {
-        // we neeed to remove the oldest movie because we can only have 10 movies
-        savedMoviesList = savedMoviesList.slice(1)  // slice this removes first item(movie) in the array
-        savedMoviesList.push(inputEl.innerHTML)  // push adds new item(movie) to end of array
+    if (savedMoviesList.length >= 10) {  
+        // we need to prevent more movies being added after 10 movies
+         savedMoviesList = savedMoviesList.slice(0,0) // slice: this prevents item(movie) to be added to array after 10 movies
+        
     } else {
-       //  need to put data into savedMoviesList
-        // remember, savedMoviesList is an array!
+    //  need to put data into savedMoviesList
+     // remember, savedMoviesList is an array!
         savedMoviesList.push(inputEl.innerHTML)
+        //saves the movie in 'saved movies' li
+        var li = document.createElement("li");
+        li.appendChild(document.createTextNode(inputEl.innerHTML));
+        savedMoviesUlEl.appendChild(li);
+
+        //last, set savedMoviesList into local storage
+        localStorage.setItem("moviesList", JSON.stringify(savedMoviesList));
     }
-
-    
-    //last, set savedMoviesList into local storage
-    localStorage.setItem("moviesList", JSON.stringify(savedMoviesList));
-
-
-    //saves the movie in 'saved movies' list
-    var li = document.createElement("li");
-    li.appendChild(document.createTextNode(inputEl.innerHTML));
-    savedMoviesUlEl.appendChild(li);
-
 })
 
 
@@ -198,6 +200,7 @@ generateBookBtnEl.addEventListener("click", function () {
 })
 
 savebtnBookEl.addEventListener("click", function() {
+    console.log();
 
     //save book in local storage -->
 
@@ -205,36 +208,26 @@ savebtnBookEl.addEventListener("click", function() {
     var savedBooksList = JSON.parse(localStorage.getItem("booksList") || "[]");
         console.log("Saved Books List", savedBooksList);
     
-    // we only want 10 Books on the Book list. IF there are more than 10, remove the oldest one and add a new on
+    // we only want 10 Books on the Book list. IF there are more than 10, no more should be added
     //check how many books are in the list
-    if  (savedBooksList.length > 1) {
-        savedBooksList = savedBooksList.slice(1) // slice removes first item(book) in the array
-        savedBooksList.push(inputBookEl.innerHTML) // push adds new item(book) to end of array
-    
-    }else{
+    if  (savedBooksList.length >= 10) {
+        savedBooksList = savedBooksList.slice(0,0) // slice: this prevents item(book) to be added to array after 10 items
+     }else{
         // next, need to put data into savedBooksList
         // remember, savedBooksList is an array!
-       savedBooksList.push(inputBookEl.innerHTML)
+        savedBooksList.push(inputBookEl.innerHTML)
+
+         //saves the book in 'saved books' list
+        var li = document.createElement("li");
+        li.appendChild(document.createTextNode(inputBookEl.innerHTML));
+        savedBooksUlEl.appendChild(li);
+    
+        //last, set savedBooksList into local storage
+        localStorage.setItem("booksList", JSON.stringify(savedBooksList));
 
      }
 
-    //last, set savedBooksList into local storage
-    localStorage.setItem("booksList", JSON.stringify(savedBooksList));
-
-     //saves the book in 'saved books' list
-     var li = document.createElement("li");
-     li.appendChild(document.createTextNode(inputBookEl.innerHTML));
-     savedBooksUlEl.appendChild(li);
 })
-
-
-// save button click function for book
-// savebtnBookEl.addEventListener("click", function () {
-//     var li = document.createElement("li");
-//     li.appendChild(document.createTextNode(inputBookEl.innerHTML));
-//     savedBooksUlEl.appendChild(li);
-
-// })
 
 
 //google button event listener to open new tabs and search generated book
@@ -243,9 +236,9 @@ googleBookBtnEl.addEventListener("click", function () {
 
 })
 
+//grubhub button event listener to redirect to grubhub
 foodSearchBtnEl.addEventListener("click", function() {
-
-    window.open("https://grubhub.com"); 
+     window.open("https://grubhub.com"); 
 
  })
 

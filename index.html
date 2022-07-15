@@ -15,7 +15,8 @@
         href="https://fonts.googleapis.com/css2?family=Passion+One&family=Paytone+One&family=Roboto:wght@300;400;500&display=swap"
         rel="stylesheet">
     <!-- google fonts end  -->
-
+    <!-- open iconic -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/open-iconic/1.1.1/font/css/open-iconic-foundation.min.css">
     <!-- favicon  -->
     <link rel="icon" type="image/x-icon" href="./assets/images/shelf-icon-14.png">
     <!-- fontawesome for icons  -->
@@ -32,6 +33,32 @@
                     style="--fa-animation-duration: 3s;"></i></i> Media Shelf <i class="fa-solid fa-book fa-sm fa-flip"
                     style="--fa-animation-duration: 3s;"></i></i></p>
         </div>
+    </nav>
+
+     <!--Navigation / Menu-->
+     <nav class="navbar has-shadow is-primary">
+        <!--temp logo-->
+        <div class="navbar-brand">
+            <a class="navbar-item">
+                <img src="./assets/images/shelf-icon-14.png" alt="logo">
+            </a>
+
+        <!--Mobile Menu-->
+            <a class="navbar-burger" id="burger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </a>
+        </div>
+
+        <!--Desktop Menu-->
+            <div class="navbar-menu" id="nav-links">
+                <div class="navbar-end">
+                    <a href="#movies" class="navbar-item">Movies</a>
+                    <a href="#books" class="navbar-item">Books</a>
+                    <a href="#food" class="navbar-item">Food</a>
+                </div>
+            </div>
     </nav>
 
 
@@ -62,7 +89,7 @@
 
 
     <!-- movie search and button controls section  -->
-    <div class="level-center mb-6">
+    <div class="level-center mb-6" id="books">
         <div class="level-item">
             <p class="subtitle is-5 mb-2 has-text-centered">
                 <strong>Click the Search button for a <b>movie</b> suggestion!</strong>
@@ -98,9 +125,18 @@
 
 
     <!-- saved movie section  -->
+    <div class="saved-movie-title">
+        <h2 class="title is-5 saved-movies has-text-centered">Saved Movies</h2>
+    </div>
+
+    <!--note for saved movie section-->
+    <div class="note-movie-container">
+        <h3><b>Note:</b> Only 10 movies max can be saved!</h3>
+    </div>
+
+    <!--unordered list for saved movies-->
     <div class="container saved-section">
         <div class="box has-text-centered">
-            <h2 class="title is-5 saved-movies has-text-centered">Saved Movies</h2>
             <ul class="savedMovies"></ul>
         </div>
     </div>
@@ -114,7 +150,7 @@
 
 
     <!-- BOOK search and button controls section  -->
-    <div class="level-center mt-6 mb-6">
+    <div class="level-center mt-6 mb-6" id="books">
         <div class="level-item">
             <p class="subtitle is-5 mb-2 has-text-centered">
                 <strong>Click the Search button for a <b>book</b> suggestion!</strong>
@@ -151,9 +187,18 @@
 
 
     <!-- saved book section  -->
+    <div class="saved-book-title">
+        <h2 class="title is-5 saved-books has-text-centered">Saved Books</h2>
+    </div>
+
+    <!--note for saved books-->
+    <div class="note-book-container">
+        <h3><b>Note:</b> Only 10 books max can be saved!</h3>
+    </div>
+
+    <!--unorderedlist for saved books-->
     <div class="container saved-section has-text-centered">
-        <div class="box has-text-centered">
-            <h2 class="title is-5 saved-books has-text-centered">Saved Books</h2>
+        <div class="box has-text-centered mt-3">
             <ul class="savedBooks has-text-centered"></ul>
         </div>
     </div>
@@ -170,8 +215,8 @@
     <div class="food-container  has-text-centered" id="food">
         <h2 class="food-section-title has-text-centered"> <strong>Hungry? Order with Grubhub!</strong></h2>
         <div class="food-info level-item">
-            <button class="button grubhubBtn has-background-success" id="grubhub-search">Go to Grubhub <span
-                    class="fi-arrow-right"></span></button>
+            <button class="button grubhubBtn has-background-success" id="grubhub-search">Go to Grubhub     
+                <span class="fi-arrow-right"><span></button>
         </div>
     </div>
 
