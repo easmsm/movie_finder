@@ -1,2 +1,5 @@
 # movie_finder
-This app pairs The Movie DB database with availability confirmation on Netflix (using Streaming Availability). The top section of the app will suggest a random movie, the bottom section will show streaming availability. 
+
+Issues Remaining: 
+(1)When no movie/book is entered the "your suggestion awaits..." text will save in the list if the save button is clicked. 
+(2)Possibly figure out how to allow users to select which items they want to delete from each list.
