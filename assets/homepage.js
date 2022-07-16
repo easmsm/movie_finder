@@ -163,7 +163,7 @@ function deleteBtnMovie(title){
    var li = document.createElement("li");
    var singleDeleteBtn = document.createElement("button")
    singleDeleteBtn.className = "singleItemDelete"
-   singleDeleteBtn.textContent = "Delete"
+   singleDeleteBtn.textContent = "Remove"
 
    li.appendChild(document.createTextNode(title));
    singleDeleteBtn.addEventListener("click", function() {
@@ -285,7 +285,7 @@ function deleteBtn(title){
         var li = document.createElement("li");
         var singleDeleteBtn = document.createElement("button")
         singleDeleteBtn.className = "singleItemDelete"
-        singleDeleteBtn.textContent = "Delete"
+        singleDeleteBtn.textContent = "Remove"
   
         li.appendChild(document.createTextNode(title));
         singleDeleteBtn.addEventListener("click", function() {

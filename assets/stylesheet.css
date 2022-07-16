@@ -55,6 +55,7 @@ body {
 
 hr {
     margin-top: 50px !important;
+  
     /* margin-bottom: 10px !important; */
 }
 
@@ -101,6 +102,18 @@ input {
     justify-content: center !important;
 }
 
-/* .singleItemDelete {
+.singleItemDelete {
+    margin-left: 8px;
+    background-color: transparent;
+    border-color: #f14668;
+    color: #f14668;
+    border-width: 1px;
+    cursor: pointer;
+    border-radius: 3px;
+
     
-} */
+}
+
+li {
+    margin-bottom: 30px;
+}
