@@ -33,6 +33,32 @@ body {
     opacity: 50%;
 }
 
+.movie-image-container{
+    background-image: url("./images/movies-image.png");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: 100% 100%;
+    height: 500px;
+    margin-bottom: 25px;
+
+}
+
+.book-image-container {
+    background-image: url("./images/books-image.jpg");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: 100% 100%;
+    height: 500px;
+    margin-bottom: 25px;
+
+}
+
+.search-prompt-container{
+    display: flex;
+    justify-content: center;
+
+}
+
 .saved-movie-title, .saved-book-title {
     margin-bottom: 5px;
     display: flex;

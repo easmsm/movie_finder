@@ -1,4 +1,5 @@
 // variables for DOM elements 
+
 var inputEl = document.querySelector(".input")
 var generateBtnEl = document.querySelector(".generate")
 var savebtnMovieEl = document.querySelector(".save")
@@ -24,7 +25,8 @@ burgerIcon.addEventListener('click', () => {
     navbarMenu.classList.toggle('is-active');
 });
 
-//delete buttons
+
+//DELETE LIST BUTTONS
 
 //delete book list
 deleteBookListBtnEl.addEventListener("click", function (){
@@ -123,7 +125,7 @@ function randomIndex(array) {
 
 // save button click function 
 savebtnMovieEl.addEventListener("click", function () {
-
+    
     //save movie in local storage -->
 
     // first, need to get data in local storage
@@ -136,6 +138,8 @@ savebtnMovieEl.addEventListener("click", function () {
          savedMoviesList = savedMoviesList.slice(0,0) // slice: this prevents item(movie) to be added to array after 10 movies
         
     } else {
+
+        
     //  need to put data into savedMoviesList
      // remember, savedMoviesList is an array!
         savedMoviesList.push(inputEl.innerHTML)
