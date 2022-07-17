@@ -56,8 +56,10 @@ function onPageLoad() {
             // in a for loop, the current thing you are looping over is savedMovies[i]
             console.log(savedMovies);
 
+
             //loads movies in "saved movies list"
             deleteBtnMovie(savedMovies[i])
+
 
         }
     
@@ -66,6 +68,7 @@ function onPageLoad() {
 
         for (var i = 0; i < savedBooks.length; i++) {
             console.log(savedBooks);
+
 
         //loads books in "saved books list"
         deleteBtn(savedBooks[i])
@@ -76,9 +79,11 @@ function onPageLoad() {
 
 onPageLoad()
 
+
 // MOVIE SECTION
 // MOVIE SECTION
 // MOVIE SECTION 
+
 
 // random page from fetch function 
 function randomUrl() {
@@ -135,10 +140,11 @@ savebtnMovieEl.addEventListener("click", function () {
     //  need to put data into savedMoviesList
      // remember, savedMoviesList is an array!
         savedMoviesList.push(inputEl.textContent)
+
         //saves the movie in 'saved movies' list when save button is clicked
         deleteBtnMovie(inputEl.textContent)
         
-       
+   
 
         //last, set savedMoviesList into local storage
         localStorage.setItem("moviesList", JSON.stringify(savedMoviesList));
@@ -149,7 +155,9 @@ savebtnMovieEl.addEventListener("click", function () {
 
 
 function deleteBtnMovie(title){
+
     //saves the movie in 'saved movies' list
+
    var li = document.createElement("li");
    var singleDeleteBtn = document.createElement("button")
    singleDeleteBtn.className = "singleItemDelete"
@@ -235,12 +243,15 @@ savebtnBookEl.addEventListener("click", function() {
      }else{
         // next, need to put data into savedBooksList
         // remember, savedBooksList is an array!
+
         savedBooksList.push(inputBookEl.textContent)
         //saves the book in 'saved books' list when save button is clicked
         deleteBtn(inputBookEl.textContent)
+
+
    
     
-    //     //last, set savedBooksList into local storage
+         //last, set savedBooksList into local storage
         localStorage.setItem("booksList", JSON.stringify(savedBooksList));
 
      }
