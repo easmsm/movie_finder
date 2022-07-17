@@ -16,7 +16,7 @@ body {
     font-family: 'Paytone One', sans-serif;
     font-weight: 400;
     font-size: 30px;
-    padding-right: 50px;
+    padding-right: 60px;
    
 }
 
@@ -25,9 +25,6 @@ body {
     font-style: italic;
     
 }
-
-
-
 
 .rows{
     display: flex;
@@ -154,11 +151,10 @@ input {
     margin-top: 10px;
 }
 
-/* 
-.shelf {
-  padding-top: 20px;
-  margin-left: 6px;
-  size: 50%;
 
-} */
+.navbar-burger {
+    display: flex;
+    justify-content: end;
+    align-items: center;
+}
 

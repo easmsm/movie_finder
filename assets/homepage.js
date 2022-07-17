@@ -4,7 +4,6 @@ var generateBtnEl = document.querySelector(".generate")
 var savebtnMovieEl = document.querySelector(".save")
 var savedMoviesUlEl = document.querySelector(".savedMovies")
 var googlebtnEl = document.querySelector(".google")
-// var savedBookUlEl = document.querySelector(".savedBooks")
 var generateBookBtnEl = document.querySelector(".generateBook")
 var inputBookEl = document.querySelector(".inputBook")
 var googleBookBtnEl = document.querySelector(".googleBook")
@@ -55,12 +54,8 @@ function onPageLoad() {
         for (var i = 0; i < savedMovies.length; i++) {
             // in a for loop, the current thing you are looping over is savedMovies[i]
             console.log(savedMovies);
-
-
             //loads movies in "saved movies list"
             deleteBtnMovie(savedMovies[i])
-
-
         }
     
     var savedBooks = JSON.parse(localStorage.getItem("booksList") || "[]");
@@ -68,7 +63,6 @@ function onPageLoad() {
 
         for (var i = 0; i < savedBooks.length; i++) {
             console.log(savedBooks);
-
 
         //loads books in "saved books list"
         deleteBtn(savedBooks[i])
@@ -145,7 +139,6 @@ savebtnMovieEl.addEventListener("click", function () {
         deleteBtnMovie(inputEl.textContent)
         
    
-
         //last, set savedMoviesList into local storage
         localStorage.setItem("moviesList", JSON.stringify(savedMoviesList));
     }
@@ -179,14 +172,11 @@ function deleteBtnMovie(title){
 
 
 
-
-
 //google click function
 googlebtnEl.addEventListener("click", function () {
     window.open('http://www.google.com/search?q=' + inputEl.innerHTML);
 
 })
-
 
 
 
@@ -248,8 +238,6 @@ savebtnBookEl.addEventListener("click", function() {
         //saves the book in 'saved books' list when save button is clicked
         deleteBtn(inputBookEl.textContent)
 
-
-   
     
          //last, set savedBooksList into local storage
         localStorage.setItem("booksList", JSON.stringify(savedBooksList));
@@ -279,7 +267,6 @@ function deleteBtn(title){
 }
 
 
-
 //google button event listener to open new tabs and search generated book
 googleBookBtnEl.addEventListener("click", function () {
     window.open('http://www.google.com/search?q=' + inputBookEl.innerHTML);
@@ -291,46 +278,3 @@ foodSearchBtnEl.addEventListener("click", function() {
      window.open("https://grubhub.com"); 
 
  })
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-//---------------OLD CODE for reference-------------------
-//--------------------------------------------------------
-//--------------------------------------------------------
-
-
-// // BOOKS 
-// function RandomBook() {
-//     var bookRdm = Math.floor(Math.random() * 37)
-//     return bookRdm
-// }
-
-
-
-
-    // show quote NOT GOIN TO USE??
-// const options = {
-// 	method: 'GET',
-// 	headers: {
-// 		'X-RapidAPI-Key': '61329c8183msh78cc9d6cf80b668p1997dajsn80542530576b',
-// 		'X-RapidAPI-Host': 'movies-quotes.p.rapidapi.com'
-// 	}
-// };
-
-// fetch('https://movies-quotes.p.rapidapi.com/quote', options)
-// 	.then(response => response.json())
-// 	.then(response => console.log(response))
-// 	.catch(err => console.error(err));
