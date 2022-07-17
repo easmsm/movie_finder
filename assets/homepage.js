@@ -136,9 +136,9 @@ savebtnMovieEl.addEventListener("click", function () {
         console.log("Saved Movies List", savedMoviesList);
     // we only want 10 movies on the movies list. IF there are more than 10, no more should be added to the list
     // check how many movies are in the movies list
-    if (savedMoviesList.length >= 10) {  
+    if (movieKey >= 10) {  
         // we need to prevent more movies being added after 10 movies
-         savedMoviesList = savedMoviesList.slice(0,0) // slice: this prevents item(movie) to be added to array after 10 movies
+        movieKey = movieKey.slice(0,0) // slice: this prevents item(movie) to be added to array after 10 movies
         
     } else {
     //  need to put data into savedMoviesList
@@ -177,15 +177,6 @@ function deleteBtnMovie(title){
   
 
 }
-
-
-
-
-
-
-
-
-
 
 
 
@@ -249,8 +240,8 @@ savebtnBookEl.addEventListener("click", function() {
     
     // // we only want 10 Books on the Book list. IF there are more than 10, no more should be added
     // //check how many books are in the list
-    if  (savedBooksList.length >= 10) {
-        savedBooksList = savedBooksList.slice(0,0) // slice: this prevents item(book) to be added to array after 10 items
+    if  (bookKey >= 10) {
+        bookKey = bookKey.slice(0,0) // slice: this prevents item(book) to be added to array after 10 items
      }else{
         // next, need to put data into savedBooksList
         // remember, savedBooksList is an array!
