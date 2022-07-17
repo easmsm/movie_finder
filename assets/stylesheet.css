@@ -12,12 +12,16 @@ body {
 
 .navbar {
     display: flex;
-    justify-content: center;
+    justify-content: left;
     align-items: center;
     font-family: 'Paytone One', sans-serif;
     font-weight: 400;
     font-size: 30px;
+    padding-right: 50px;
+   
 }
+
+ 
 
 .welcome {
     font-style: italic;
@@ -125,4 +129,16 @@ input {
     padding: 100px, 100px, 100px, 100px;
     display: flex !important;
     justify-content: center !important;
+}
+
+.singleItemDelete {
+    margin-left: 8px;
+    background-color: transparent;
+    border-color: #f14668;
+    color: #f14668;
+    border-width: 1px;
+    cursor: pointer;
+    border-radius: 3px;
+
+    
 }

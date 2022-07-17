@@ -16,6 +16,7 @@ var foodSearchBtnEl = document.querySelector(".grubhubBtn");
 var deleteBookListBtnEl = document.querySelector(".deleteSavedBooksBtn")
 var deleteMovieListBtnEl = document.querySelector(".deleteSavedMoviesBtn")
 
+
 //mobile menu
 
 const burgerIcon = document.querySelector('#burger');
@@ -55,12 +56,24 @@ function onPageLoad() {
             // in a for loop, the current thing you are looping over is savedMovies[i]
             console.log(savedMovies[i]);
 
-    //loads movies in "saved movies list"
-        var li = document.createElement("li");
-        li.appendChild(document.createTextNode(savedMovies[i]));  //savedMovies[i] is the name of the movie to put on the page
-        savedMoviesUlEl.appendChild(li);
+
+            
+
+             //loads movies in "saved movies list"
+            var li = document.createElement("li");
+            li.appendChild(document.createTextNode(savedMovies[i]));  //savedMovies[i] is the name of the movie to put on the page
+            var singleDeleteBtn = document.createElement("button")
+            singleDeleteBtn.className = "singleItemDelete"
+            singleDeleteBtn.textContent = "Remove"
+            li.appendChild(singleDeleteBtn)
+            savedMoviesUlEl.appendChild(li);
+
+            
+        
 
         }
+
+        
     
     var savedBooks = JSON.parse(localStorage.getItem("booksList") || "[]");
             console.log(savedBooks);
@@ -70,6 +83,10 @@ function onPageLoad() {
 
         var li = document.createElement("li");
         li.appendChild(document.createTextNode(savedBooks[i]));
+        var singleDeleteBtn = document.createElement("button")
+        singleDeleteBtn.className = "singleItemDelete"
+        singleDeleteBtn.textContent = "Delete"
+        li.appendChild(singleDeleteBtn)
         savedBooksUlEl.appendChild(li);
 
         }
@@ -106,9 +123,7 @@ var fetchFunction = function () {
         .catch(err => console.error(err));
 }
 
-// btnEl.addEventListener("click", fetchFunction){
-//     document.createElement(li)
-// }
+
 
 
 // Search button function to call fetch function to get a generated movie every click
@@ -138,21 +153,32 @@ savebtnMovieEl.addEventListener("click", function () {
          savedMoviesList = savedMoviesList.slice(0,0) // slice: this prevents item(movie) to be added to array after 10 movies
         
     } else {
-
-        
-    //  need to put data into savedMoviesList
-     // remember, savedMoviesList is an array!
+        //  need to put data into savedMoviesList
+         // remember, savedMoviesList is an array!
         savedMoviesList.push(inputEl.innerHTML)
-        //saves the movie in 'saved movies' li
+
+         
+
+        //saves the movie and delete buttons in 'saved movies' list
         var li = document.createElement("li");
         li.appendChild(document.createTextNode(inputEl.innerHTML));
-        savedMoviesUlEl.appendChild(li);
+        var singleDeleteBtn = document.createElement("button")
+	     singleDeleteBtn.className = "singleItemDelete"
+	     singleDeleteBtn.textContent = "Remove"
+         li.appendChild(singleDeleteBtn)
+         savedMoviesUlEl.appendChild(li);
+         
 
-        //last, set savedMoviesList into local storage
-        localStorage.setItem("moviesList", JSON.stringify(savedMoviesList));
-    }
-})
+         //last, set savedMoviesList into local storage
+         localStorage.setItem("moviesList", JSON.stringify(savedMoviesList));
 
+         
+        //needs addevent listener for delete buttons
+         
+        }
+
+        
+     })
 
 //google click function
 googlebtnEl.addEventListener("click", function () {
@@ -221,13 +247,22 @@ savebtnBookEl.addEventListener("click", function() {
         // remember, savedBooksList is an array!
         savedBooksList.push(inputBookEl.innerHTML)
 
-         //saves the book in 'saved books' list
+
+        //saves the book and delete buttons in 'saved books' list
         var li = document.createElement("li");
         li.appendChild(document.createTextNode(inputBookEl.innerHTML));
+        var singleDeleteBtn = document.createElement("button")
+        singleDeleteBtn.className = "singleItemDelete"
+        singleDeleteBtn.textContent = "Delete"
+        li.appendChild(singleDeleteBtn)
         savedBooksUlEl.appendChild(li);
     
         //last, set savedBooksList into local storage
         localStorage.setItem("booksList", JSON.stringify(savedBooksList));
+
+        //needs addeventlistener for delete buttons
+
+        
 
      }
 

@@ -24,43 +24,39 @@
     <title>Media Shelf</title>
 </head>
 
-<body>
-
+<header>
     <!-- navbar section  -->
-    <nav class="navbar is-dark" role="navigation" aria-label="main navigation">
-        <div class="navbar-brand is-align-items-center is-flex is-justify-content-center">
-            <p class="has-text-light"><i class="fa-solid fa-film fa-sm fa-flip"
-                    style="--fa-animation-duration: 3s;"></i></i> Media Shelf <i class="fa-solid fa-book fa-sm fa-flip"
-                    style="--fa-animation-duration: 3s;"></i></i></p>
-        </div>
-    </nav>
+<nav class="navbar is-dark" role="navigation" aria-label="main navigation">
+    <div class="navbar-brand is-align-items-center is-flex is-justify-content-center">
+        <p class="has-text-light"><i class="fa-solid fa-film fa-sm fa-flip"
+                style="--fa-animation-duration: 3s;"></i></i> Media Shelf <i class="fa-solid fa-book fa-sm fa-flip"
+                style="--fa-animation-duration: 3s;"></i></i></p>
+    </div>
 
      <!--Navigation / Menu-->
-     <nav class="navbar has-shadow is-primary">
-        <!--temp logo-->
-        <div class="navbar-brand">
-            <a class="navbar-item">
-                <img src="./assets/images/shelf-icon-14.png" alt="logo">
-            </a>
-
+     
         <!--Mobile Menu-->
             <a class="navbar-burger" id="burger">
                 <span></span>
                 <span></span>
                 <span></span>
             </a>
+        
+     <!--Desktop Menu-->
+    <div class="navbar-menu" id="nav-links">
+        <div class="navbar-end">
+            <a href="#movies" class="navbar-item">Movies</a>
+            <a href="#books" class="navbar-item">Books</a>
+            <a href="#food" class="navbar-item">Food</a>
         </div>
+    </div>
 
-        <!--Desktop Menu-->
-            <div class="navbar-menu" id="nav-links">
-                <div class="navbar-end">
-                    <a href="#movies" class="navbar-item">Movies</a>
-                    <a href="#books" class="navbar-item">Books</a>
-                    <a href="#food" class="navbar-item">Food</a>
-                </div>
-            </div>
-    </nav>
+</nav>
 
+</header>
+
+
+<body>
 
     <!-- Hero section  -->
     <section class="hero is-small is-link mb-5">
