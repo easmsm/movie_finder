@@ -1,5 +1,5 @@
 # movie_finder
+Updates sent to this branch 7/17/2022 at 3:45pm
+Issue: 10 max count still not working
 
-Issues Remaining: 
-(1)When no movie/book is entered the "your suggestion awaits..." text will save in the list if the save button is clicked. 
-(2)Possibly figure out how to allow users to select which items they want to delete from each list.
+This branch will be merged with feature/delete-list item branch
