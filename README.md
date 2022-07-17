@@ -1,2 +1,5 @@
 # movie_finder
-This app pairs The Movie DB database with availability confirmation on Netflix (using Streaming Availability). The top section of the app will suggest a random movie, the bottom section will show streaming availability. 
+Updates sent to this branch 7/17/2022 at 3:45pm
+Issue: 10 max count still not working
+
+This branch will be merged with feature/delete-list item branch

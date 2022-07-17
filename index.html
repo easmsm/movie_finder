@@ -15,7 +15,9 @@
         href="https://fonts.googleapis.com/css2?family=Passion+One&family=Paytone+One&family=Roboto:wght@300;400;500&display=swap"
         rel="stylesheet">
     <!-- google fonts end  -->
-
+    <!-- open iconic -->
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/open-iconic/1.1.1/font/css/open-iconic-foundation.min.css">
     <!-- favicon  -->
     <link rel="icon" type="image/x-icon" href="./assets/images/shelf-icon-14.png">
     <!-- fontawesome for icons  -->
@@ -23,16 +25,38 @@
     <title>Media Shelf</title>
 </head>
 
-<body>
-
+<header>
     <!-- navbar section  -->
-    <nav class="navbar is-dark" role="navigation" aria-label="main navigation">
-        <div class="navbar-brand is-align-items-center is-flex is-justify-content-center">
-            <p class="has-text-light"><i class="fa-solid fa-film fa-sm fa-flip"
-                    style="--fa-animation-duration: 3s;"></i></i> Media Shelf <i class="fa-solid fa-book fa-sm fa-flip"
-                    style="--fa-animation-duration: 3s;"></i></i></p>
+
+<nav class="navbar is-dark" role="navigation" aria-label="main navigation">
+    <div class="navbar-brand is-align-items-center is-flex is-justify-content-center">
+        <p class="has-text-light"><i class="fa-solid fa-film fa-sm fa-flip"
+                style="--fa-animation-duration: 3s;"></i></i> Media Shelf <i class="fa-solid fa-book fa-sm fa-flip"
+                style="--fa-animation-duration: 3s;"></i></i></p>
+    </div>
+
+     <!--Navigation / Menu-->
+     
+        <!--Mobile Menu-->
+            <a class="navbar-burger" id="burger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </a>
+        
+     <!--Desktop Menu-->
+    <div class="navbar-menu" id="nav-links">
+        <div class="navbar-end">
+            <a href="#movies" class="navbar-item">Movies</a>
+            <a href="#books" class="navbar-item">Books</a>
+            <a href="#food" class="navbar-item">Food</a>
         </div>
-    </nav>
+    </div>
+ </nav>
+</header>
+
+
+<body>
 
 
     <!-- Hero section  -->
@@ -61,20 +85,32 @@
     </div> -->
 
 
-    <!-- movie search and button controls section  -->
-    <div class="level-center mb-6">
+  <!--movie background image container-->
+  <div class="movie-image-container">""</div>
+        
+    <!-- MOVIE search and button controls section  -->
+    <!--movie search instructions-->
+    <div class="level-center mb-6" id="movies">
         <div class="level-item">
             <p class="subtitle is-5 mb-2 has-text-centered">
                 <strong>Click the Search button for a <b>movie</b> suggestion!</strong>
             </p>
         </div>
+
+        <div class="search-prompt-container">
+            <h3>Your Suggestion Awaits....</h3>
+        </div>
+
         <div class="level-item">
             <div class="field has-addons">
-                <p class="control input opacity">
-                    Your suggestion awaits....
+                <p class="control input  opacity">
+                   
+
                 </p>
             </div>
         </div>
+
+        <!--movie search control buttons-->
         <div class="level-item">
             <div class="field has-addons mt-3">
                 <p class="control">
@@ -98,30 +134,55 @@
 
 
     <!-- saved movie section  -->
+    <div class="saved-movie-title">
+        <h2 class="title is-5 saved-movies has-text-centered">Saved Movies</h2>
+    </div>
+
+    <!--note for saved movie section-->
+    <div class="note-movie-container">
+        <h3><b>Note:</b> Only 10 movies max can be saved!</h3>
+    </div>
+
+    <!--unordered list for saved movies-->
     <div class="container saved-section">
-        <div class="box">
-            <h2 class="title is-5 saved-movies has-text-centered">Saved Movies</h2>
+        <div class="box has-text-centered">
             <ul class="savedMovies"></ul>
         </div>
     </div>
 
+    <!-- delete movie list button  -->
+    <div class="container level-item mt-4">
+        <button class="button is-danger deleteSavedMoviesBtn">Delete List</button>
+    </div>
 
+    <hr>
 
+    <!--book background image container-->
+    <div class="book-image-container">""</div>
 
     <!-- BOOK search and button controls section  -->
-    <div class="level-center mt-6 mb-6">
+    <!--book search instructions-->
+    <div class="level-center mt-6 mb-6" id="books">
         <div class="level-item">
             <p class="subtitle is-5 mb-2 has-text-centered">
                 <strong>Click the Search button for a <b>book</b> suggestion!</strong>
             </p>
         </div>
+
+        <div class="search-prompt-container">
+            <h3>Your Suggestion Awaits....</h3>
+        </div>
+
         <div class="level-item">
             <div class="field has-addons">
-                <p class="control input inputBook opacity">
-                    Your suggestion awaits....
+            <p class="control input inputBook opacity">
+                    
+
                 </p>
             </div>
         </div>
+
+        <!--book search control buttons-->
         <div class="level-center mt-3 mb-6">
             <div class="level-item">
                 <p class="control">
@@ -146,10 +207,36 @@
 
 
     <!-- saved book section  -->
-    <div class="container saved-section">
-        <div class="box">
-            <h2 class="title is-5 saved-books has-text-centered">Saved Books</h2>
-            <ul class="savedBooks"></ul>
+    <div class="saved-book-title">
+        <h2 class="title is-5 saved-books has-text-centered">Saved Books</h2>
+    </div>
+
+    <!--note for saved books-->
+    <div class="note-book-container">
+        <h3><b>Note:</b> Only 10 books max can be saved!</h3>
+    </div>
+
+    <!--unorderedlist for saved books-->
+    <div class="container saved-section has-text-centered">
+        <div class="box has-text-centered mt-3">
+            <ul class="savedBooks has-text-centered"></ul>
+        </div>
+    </div>
+
+
+    <!-- delete book list button  -->
+    <div class="container level-item mt-4">
+        <button class="button is-danger deleteSavedBooksBtn">Delete List</button>
+    </div>
+
+    <hr>
+
+    <!--put food directory here-->
+    <div class="food-container  has-text-centered" id="food">
+        <h2 class="food-section-title has-text-centered"> <strong>Hungry? Order with Grubhub!</strong></h2>
+        <div class="food-info level-item">
+            <button class="button grubhubBtn has-background-success" id="grubhub-search">Go to Grubhub
+                <span class="fi-arrow-right"><span></button>
         </div>
     </div>
 
@@ -161,7 +248,7 @@
             <p>
                 <strong class="has-text-light">Thanks for Visiting</strong>
             </p>
-            <p><i class="fa-solid fa-lg fa-heart"></i></p>
+            <p> <i class="fa-solid fa-lg fa-heart"></i></p>
         </div>
     </footer>
 
