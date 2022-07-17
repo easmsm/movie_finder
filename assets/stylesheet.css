@@ -17,7 +17,11 @@ body {
     font-family: 'Paytone One', sans-serif;
     font-weight: 400;
     font-size: 30px;
+    padding-right: 50px;
+   
 }
+
+ 
 
 .welcome {
     font-style: italic;
@@ -34,6 +38,32 @@ body {
 
 .opacity {
     opacity: 50%;
+}
+
+.movie-image-container{
+    background-image: url("./images/movies-image.png");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: 100% 100%;
+    height: 500px;
+    margin-bottom: 25px;
+
+}
+
+.book-image-container {
+    background-image: url("./images/books-image.jpg");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: 100% 100%;
+    height: 500px;
+    margin-bottom: 25px;
+
+}
+
+.search-prompt-container{
+    display: flex;
+    justify-content: center;
+
 }
 
 .saved-movie-title, .saved-book-title {
@@ -116,7 +146,6 @@ input {
 
     
 }
-
 
 .logo   {
     margin-left: 10px;

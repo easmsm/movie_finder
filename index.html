@@ -25,43 +25,38 @@
     <title>Media Shelf</title>
 </head>
 
-<body>
-
+<header>
     <!-- navbar section  -->
-    <nav class="navbar is-dark" role="navigation" aria-label="main navigation">
-        <div class="navbar-brand is-align-items-center is-flex is-justify-content-center">
-            <p class="logo has-text-light"> Media Shelf </p>
+
+<nav class="navbar is-dark" role="navigation" aria-label="main navigation">
+    <div class="navbar-brand is-align-items-center is-flex is-justify-content-center">
+        <p class="has-text-light"><i class="fa-solid fa-film fa-sm fa-flip"
+                style="--fa-animation-duration: 3s;"></i></i> Media Shelf <i class="fa-solid fa-book fa-sm fa-flip"
+                style="--fa-animation-duration: 3s;"></i></i></p>
+    </div>
+
+     <!--Navigation / Menu-->
+     
+        <!--Mobile Menu-->
+            <a class="navbar-burger" id="burger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </a>
+        
+     <!--Desktop Menu-->
+    <div class="navbar-menu" id="nav-links">
+        <div class="navbar-end">
+            <a href="#movies" class="navbar-item">Movies</a>
+            <a href="#books" class="navbar-item">Books</a>
+            <a href="#food" class="navbar-item">Food</a>
         </div>
+    </div>
+ </nav>
+</header>
 
 
-        <!--Navigation / Menu-->
-       
-        <!--temp logo-->
-        <div class="navbar-brand">
-            <div class="navbar-item">
-                <img class="" src="./assets/images/shelf-icon-14 white.png" alt="logo">
-            </div>
-
-          
-        </div>
-
-          <!--Mobile Menu-->
-          <a class="navbar-burger" id="burger">
-            <span></span>
-            <span></span>
-            <span></span>
-        </a>
-
-        <!--Desktop Menu-->
-        <div class="navbar-menu" id="nav-links">
-            <div class="navbar-end navLinks">
-                <a href="#movies" class="navbar-item">Movies</a>
-                <a href="#books" class="navbar-item">Books</a>
-                <a href="#food" class="navbar-item">Food</a>
-            </div>
-        </div>
-    </nav>
-
+<body>
 
 
     <!-- Hero section  -->
@@ -90,20 +85,32 @@
     </div> -->
 
 
-    <!-- movie search and button controls section  -->
-    <div class="level-center mb-6" id="books">
+  <!--movie background image container-->
+  <div class="movie-image-container">""</div>
+        
+    <!-- MOVIE search and button controls section  -->
+    <!--movie search instructions-->
+    <div class="level-center mb-6" id="movies">
         <div class="level-item">
             <p class="subtitle is-5 mb-2 has-text-centered">
                 <strong>Click the Search button for a <b>movie</b> suggestion!</strong>
             </p>
         </div>
+
+        <div class="search-prompt-container">
+            <h3>Your Suggestion Awaits....</h3>
+        </div>
+
         <div class="level-item">
             <div class="field has-addons">
-                <p class="">
-                    <span class="control input opacity" role="textbox">Your suggestion awaits....</span>
+                <p class="control input  opacity">
+                   
+
                 </p>
             </div>
         </div>
+
+        <!--movie search control buttons-->
         <div class="level-item">
             <div class="field has-addons mt-3">
                 <p class="control">
@@ -150,21 +157,32 @@
 
     <hr>
 
+    <!--book background image container-->
+    <div class="book-image-container">""</div>
 
     <!-- BOOK search and button controls section  -->
+    <!--book search instructions-->
     <div class="level-center mt-6 mb-6" id="books">
         <div class="level-item">
             <p class="subtitle is-5 mb-2 has-text-centered">
                 <strong>Click the Search button for a <b>book</b> suggestion!</strong>
             </p>
         </div>
+
+        <div class="search-prompt-container">
+            <h3>Your Suggestion Awaits....</h3>
+        </div>
+
         <div class="level-item">
             <div class="field has-addons">
-                <p class="bookInput">
-                    <span class="control inputBook opacity" role="textbox">Your suggestion awaits....</span>
+            <p class="control input inputBook opacity">
+                    
+
                 </p>
             </div>
         </div>
+
+        <!--book search control buttons-->
         <div class="level-center mt-3 mb-6">
             <div class="level-item">
                 <p class="control">
