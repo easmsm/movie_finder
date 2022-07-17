@@ -20,3 +20,6 @@ GitHub Live URL: https://easmsm.github.io/movie_finder/
 
 
 ## Screenshot
+![easmsm github io_movie_finder_ (3)](https://user-images.githubusercontent.com/105617274/179429201-205d581f-366f-425e-8e62-53b9b870a47f.png)
+
+![easmsm github io_movie_finder_ (4)](https://user-images.githubusercontent.com/105617274/179429202-f5638c7b-3b97-4782-9d76-17f522c57f2b.png)
