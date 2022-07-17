@@ -1,0 +1,164 @@
+/* 
+fonts
+font-family: 'Passion One', cursive;
+font-family: 'Paytone One', sans-serif;
+font-family: 'Roboto', sans-serif */
+
+
+body {
+    font-family: 'Roboto', sans-serif 
+}
+
+.navbar {
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    font-family: 'Paytone One', sans-serif;
+    font-weight: 400;
+    font-size: 30px;
+    padding-right: 50px;
+   
+}
+
+
+.welcome {
+    font-style: italic;
+    
+}
+
+
+
+
+.rows{
+    display: flex;
+    flex-direction: column;
+}
+
+.opacity {
+    opacity: 50%;
+}
+
+.movie-image-container{
+    background-image: url("./images/movies-image.png");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: 100% 100%;
+    height: 500px;
+    margin-bottom: 25px;
+
+}
+
+.book-image-container {
+    background-image: url("./images/books-image.jpg");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: 100% 100%;
+    height: 500px;
+    margin-bottom: 25px;
+
+}
+
+.search-prompt-container{
+    display: flex;
+    justify-content: center;
+
+}
+
+.saved-movie-title, .saved-book-title {
+    margin-bottom: 5px;
+    display: flex;
+    justify-content: center;
+}
+
+.note-movie-container, .note-book-container {
+    margin-bottom: 5px;
+    display: flex;
+    justify-content: center;
+
+}
+
+.saved-movies, .saved-books {
+    border-bottom: 1px solid black;
+    width: fit-content;
+    display: flex;
+
+}
+
+hr {
+    margin-top: 50px !important;
+  
+    /* margin-bottom: 10px !important; */
+}
+
+.saved-section {
+    display: flex;
+    justify-content: center;
+}
+
+
+.google {
+    display: flex;
+    justify-content: center;
+}
+
+footer {
+    height: 100px;
+}
+
+input {
+     word-wrap: break-word; 
+     overflow:auto;
+   
+}
+
+.food-container {
+    margin-top: 50px;
+    margin-bottom: 50px;
+    
+}
+
+.food-section-title {
+    margin-bottom: 25px;
+    font-size: 20px;
+}
+
+ .grubhubBtn {
+    height: 50px;
+    border-radius: 5px;
+    text-align: center;
+    font-weight: bold;
+    font-size: 15px;
+    padding: 100px, 100px, 100px, 100px;
+    display: flex !important;
+    justify-content: center !important;
+}
+
+.singleItemDelete {
+    margin-left: 8px;
+    background-color: transparent;
+    border-color: #f14668;
+    color: #f14668;
+    border-width: 1px;
+    cursor: pointer;
+    border-radius: 3px;
+
+    
+}
+
+.logo   {
+    margin-left: 10px;
+}
+
+.bookInput{
+    margin-bottom: 9px;
+    margin-top: 10px;
+}
+
+/* 
+.shelf {
+  padding-top: 20px;
+  margin-left: 6px;
+  size: 50%;
+
+} */
+
